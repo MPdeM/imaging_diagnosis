@@ -5,7 +5,7 @@ Project Summary: to use X-Ray lung images to detect COVI-19 positive cases using
 
 Deep learning techniques for image analysis and classification Xray images can be used to spot anomalies and aid health personel in the diagnosis. 
 
-## 🛑 the work in here is purelly exploratory and IT IS NOT INTENDED FOR DIAGNOSTIC PURPOSES. 
+##  the work in here is purelly exploratory and IT IS NOT INTENDED FOR DIAGNOSTIC PURPOSES. 
 
 ![](images/SARS-CoV-2_without_background.png)
 
@@ -53,14 +53,14 @@ Create a Convolutional Neural Network using Keras, TensorFlow and deep learning 
 - 1 load the VGG16 network https://keras.io/applications/#vgg16
 - 2 model is compiled using Adam optimizer and fit using 10 epocs
 
- ![](images/Training.png)
+ ![](images/Training.PNG)
 
 ## EVALUATION AND PREDICTION
 
 - 1 Model was tested with unseen data with a precission of 96% 
 - 2 The model was saved using HDF5 binary format
 
-![](images/ClassReport.png)
+![](images/ClassReport.PNG)
 
 The model has an accuracy of 96% based only on x-ray images and no other feature. Sensitivity of 96 % and specificity of 95% means that from patients that HAVE COVID-19 the model accurately identify them as positive in 96% of the cases. From patients that do NOT HAVE COVID-19, the model identified as covid negative 96 % of the time. 
 
