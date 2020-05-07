@@ -59,7 +59,9 @@ Create a Convolutional Neural Network using Keras, TensorFlow and deep learning 
 
 - 1 Model was tested with unseen data with a precission of 96% 
 - 2 The model was saved using HDF5 binary format
+
 ![](images/ClassReport.png)
+
 The model has an accuracy of 96% based only on x-ray images and no other feature. Sensitivity of 96 % and specificity of 95% means that from patients that HAVE COVID-19 the model accurately identify them as positive in 96% of the cases. From patients that do NOT HAVE COVID-19, the model identified as covid negative 96 % of the time. 
 
 As always how good or bad is any diagnosis tool depends on the context that is used. In this case it will be really bad if the model missed a covid-19 positive and goes home thinking is negative and spreads the infection further. 
