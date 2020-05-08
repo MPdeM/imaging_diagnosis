@@ -1,4 +1,4 @@
-#### imaging_diagnosis: NOT FOR CLINICAL USE
+#### imaging_diagnosis: NOT INTENDENT for Di USE
 
 ### COVID-19 X-Rays PREDICTOR
 Project Summary: to use X-Ray lung images to detect COVI-19 positive cases using Machine Learning. 
@@ -88,6 +88,11 @@ The last part is meant to allow to check x-ray images for covid-19. These are th
 
 In this case, the model acurately predicted that the image was Covid-19 positive. 
 
+##  Further steps
+
+- To improve the model is always important to have more data. Hence adding new data seems the next logic step. 
+- To improve performance of this approach the rest of the metadata should be studied. Finding other features that may be relevant could help nurses/doctors to triage patients faster. 
+- Using CT scans may be better in some cases where lung damage is not as generalized or other orgads may affected. However CT scans are not only more expensive but time consuming and time is exposure for healthcare personnel. 
 
 
 
@@ -98,4 +103,4 @@ and this paper [here](https://arxiv.org/pdf/2003.09871v3.pdf) and tons of Medium
 
 ## Feel free to contact me
 
-* Marina Marinkovic / PdeM: [LinkedIn](https://www.linkedin.com/in/marinamarinkovic/) | [GitHub](https://github.com/MPdeM)
+* Marina Marinkovic/PdeM: [LinkedIn](https://www.linkedin.com/in/marinamarinkovic/) | [GitHub](https://github.com/MPdeM)
