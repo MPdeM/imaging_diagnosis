@@ -38,16 +38,16 @@ In ML good quality data is key. The datasets are contructed from:
 The obtain the dateset with covid-19 images I cloned the repository and dowloaded the metadata.csv and /images/ folder into a folder /covid-chest-xray/ in my goggle drive '/content/drive/My Drive/covid-chest-xray/'
 To obtain the dataset for the normal x-rays I dowloaded the rsna pneumonia dataset and dowloaded the data into a folder '/pneumonia-chest-xray/' in my goggle drive. 
 
-Those two those datasets were then combined into a directory with covid x-rays ['/data/covid'](data/covid) and non-covid x-rays ['/data/normal'](data/normal)  
+Those two datasets were used to build a new dataset with covid x-rays ['/data/covid'](data/covid) and non-covid x-rays ['/data/normal'](data/normal). All the programming was in Google CoLab. 
 
 ## Inspect the Metadata of the Covid-19 dataset
 The [metadata](metadata.csv) from the Covid dataset has interesting information about the images like findings (COVID, SARS, MERS, PNEuMONIA among others) sex, age, survival, or views. The set I am intereste is the Posteroanterior view (PA) and findinds : Covid-19. 
 
 ## PROCESSING
-
+Basic steps:
  - 1 Build a normal ['/data/normal'](data/normal) and covid-19 xray['/data/covid'](data/covid) datasets
  - 2 Preprocess data by changing color and reshaping to (224,224) , default input size for the model
- - 3 Normalizing for deep learning and perform one-hot 
+ - 3 Normalizing for deep learning and perform one-hot encodidng 
  - 4 Build the train and the test sets 
 
 
@@ -55,12 +55,12 @@ The [metadata](metadata.csv) from the Covid dataset has interesting information 
 
 Create a Convolutional Neural Network using Keras, TensorFlow and deep learning in Google Colab. 
 
-- 1 load the VGG16 network https://keras.io/applications/#vgg16
-- 2 model is compiled using Adam optimizer and fit using 10 epocs
+- 1 Load the VGG16 network https://keras.io/applications/#vgg16
+- 2 Compile the using Adam optimizer and fit using 10 epocs
 
  ![](images/Training.PNG)
 
-## EVALUATION AND PREDICTION
+## EVALUATION OF the MODEL AND PREDICTION
 
 - 1 Model was tested with unseen data with a precission of 96% 
 - 2 The model was saved using HDF5 binary format
@@ -77,25 +77,25 @@ As always how good or bad is any diagnosis tool depends on the context that is u
 
 ##  CHECK YOUR OWN XRAY IMAGES
 
-The last part is meant to allow to check x-ray images for covid-19. This is what I did: 
+The last part is meant to allow to check x-ray images for covid-19. These are the spteps I followed: 
  
-- 1 I dowloaded some images on my Google Drive. In this exaple I donwloaded an image Case courtesy of Dr Fabio Macori, Radiopaedia.org. From the case rID: 74887  
+- 1 I dowloaded some images on my Google Drive. In this exaple I donwloaded an image courtesy of Dr Fabio Macori, Radiopaedia.org. From the case rID: 74887  
 ![](images/covid-19-pneumonia-14.png)
 
-- 2 load the image to CoLab, and performed image preprocess (color conversion, re-sizing, and scaling)
-- 3 re-shaping array 
-- 4 load the model and do prediction  
+- 2 Load the image to CoLab, and performed image preprocess (color conversion, re-sizing, and scaling)
+- 3 Re-shaping array 
+- 4 Load the model and do prediction  
 
-In our case it was able to predict positive to a image that actually was positive!!!
-
-
+In this case, the model acurately predicted that the image was Covid-19 positive. 
 
 
-Credits
+
+
+Credits: 
 This notebook is based on the tutorial [here](https://www.pyimagesearch.com/2020/03/16/detecting-covid-19-in-x-ray-images-with-keras-tensorflow-and-deep-learning/)
-and this paper [here](https://arxiv.org/pdf/2003.09871v3.pdf) and tons of medium articles 
+and this paper [here](https://arxiv.org/pdf/2003.09871v3.pdf) and tons of Medium articles 
 
 
-## Contact
+## Feel free to contact me
 
 * Marina Marinkovic / PdeM: [LinkedIn](https://www.linkedin.com/in/marinamarinkovic/) | [GitHub](https://github.com/MPdeM)
