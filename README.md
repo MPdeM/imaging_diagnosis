@@ -1,11 +1,11 @@
-#### imaging_diagnosis: NOT INTENDENT for Di USE
+#### imaging_diagnosis: NOT INTENDENT for MEDICAL USE
 
 ### COVID-19 X-Rays PREDICTOR
 Project Summary: to use X-Ray lung images to detect COVI-19 positive cases using Machine Learning. 
 
-Deep learning techniques for image analysis and classification Xray images can be used to spot anomalies and aid health personel in the diagnosis. 
+Deep learning techniques for image analysis and classification Xray images can be used to spot anomalies and aid healthcare personnel in the diagnosis. 
 
-##  the work in here is purelly exploratory and IT IS NOT INTENDED FOR DIAGNOSTIC PURPOSES. 
+##  the work in here is purely exploratory and IT IS NOT INTENDED FOR DIAGNOSTIC PURPOSES. 
 
 ![](images/SARS-CoV-2_without_background.png)
 
@@ -30,24 +30,24 @@ Additional requirements to generate dataset:
 - Jupyter/CoLab
 
 ## Data
-In ML good quality data is key. The datasets are contructed from:
+In ML good quality data is key. The datasets were constructed from:
 
 - https://github.com/ieee8023/covid-chestxray-dataset
 - https://www.kaggle.com/c/rsna-pneumonia-detection-challenge (which came from: https://nihcc.app.box.com/v/ChestXray-NIHCC)
 
-The obtain the dateset with covid-19 images I cloned the repository and dowloaded the metadata.csv and /images/ folder into a folder /covid-chest-xray/ in my goggle drive '/content/drive/My Drive/covid-chest-xray/'
-To obtain the dataset for the normal x-rays I dowloaded the rsna pneumonia dataset and dowloaded the data into a folder '/pneumonia-chest-xray/' in my goggle drive. 
+The obtain the dataset with covid-19 images I cloned the repository and downloaded the metadata.csv and /images/ folder into a folder /covid-chest-xray/ in my goggle drive '/content/drive/My Drive/covid-chest-xray/'
+To obtain the dataset for the normal x-rays I downloaded the rsna pneumonia dataset and downloaded the data into a folder '/pneumonia-chest-xray/' in my goggle drive. 
 
 Those two datasets were used to build a new dataset with covid x-rays ['/data/covid'](data/covid) and non-covid x-rays ['/data/normal'](data/normal). All the programming was in Google CoLab. 
 
 ## Inspect the Metadata of the Covid-19 dataset
-The [metadata](metadata.csv) from the Covid dataset has interesting information about the images like findings (COVID, SARS, MERS, PNEuMONIA among others) sex, age, survival, or views. The set I am intereste is the Posteroanterior view (PA) and findinds : Covid-19. 
+The [metadata](metadata.csv) from the Covid dataset has interesting information about the images like findings (COVID, SARS, MERS, PNEUMONIA among others) sex, age, survival, or views. The set I am interested is the Posteroanterior view (PA) and findings : Covid-19. 
 
 ## PROCESSING
 Basic steps:
  - 1 Build a normal ['/data/normal'](data/normal) and covid-19 xray['/data/covid'](data/covid) datasets
- - 2 Preprocess data by changing color and reshaping to (224,224) , default input size for the model
- - 3 Normalizing for deep learning and perform one-hot encodidng 
+ - 2 Preprocess data by changing color and reshaping to (224,224), default input size for the model
+ - 3 Normalizing for deep learning and perform one-hot encoding 
  - 4 Build the train and the test sets 
 
 
@@ -62,12 +62,12 @@ Create a Convolutional Neural Network using Keras, TensorFlow and deep learning 
 
 ## EVALUATION OF the MODEL AND PREDICTION
 
-- 1 Model was tested with unseen data with a precission of 96% 
+- 1 Model was tested with unseen data with a precision of 96% 
 - 2 The model was saved using HDF5 binary format
 
 ![](images/ClassReport.PNG)
 
-The model has an accuracy of 96% based only on x-ray images and no other feature. Sensitivity of 96 % and specificity of 95% means that from patients that HAVE COVID-19 the model accurately identify them as positive in 96% of the cases. From patients that do NOT HAVE COVID-19, the model identified as covid negative 96 % of the time. 
+The model has an accuracy of 96% based only on x-ray images and no other feature. Sensitivity of 96 % and specificity of 95% means that from patients that HAVE COVID-19 the model accurately identifies them as positive in 96% of the cases. From patients that do NOT HAVE COVID-19, the model identified as covid negative 96 % of the time. 
 
 ![](images/SensSpec.PNG)
 
@@ -77,22 +77,22 @@ As always how good or bad is any diagnosis tool depends on the context that is u
 
 ##  CHECK YOUR OWN XRAY IMAGES
 
-The last part is meant to allow to check x-ray images for covid-19. These are the spteps I followed: 
+The last part is meant to allow to check x-ray images for covid-19. These are the steps I followed: 
  
-- 1 I dowloaded some images on my Google Drive. In this exaple I donwloaded an image courtesy of Dr Fabio Macori, Radiopaedia.org. From the case rID: 74887  
+- 1 I downloaded some images on my Google Drive. In this example I downloaded an image courtesy of Dr Fabio Macori, Radiopaedia.org. From the case rID: 74887  
 ![](images/covid-19-pneumonia-14.png)
 
 - 2 Load the image to CoLab, and performed image preprocess (color conversion, re-sizing, and scaling)
 - 3 Re-shaping array 
 - 4 Load the model and do prediction  
 
-In this case, the model acurately predicted that the image was Covid-19 positive. 
+In this case, the model accurately predicted that the image was Covid-19 positive. 
 
 ##  Further steps
 
 - To improve the model is always important to have more data. Hence adding new data seems the next logic step. 
 - To improve performance of this approach the rest of the metadata should be studied. Finding other features that may be relevant could help nurses/doctors to triage patients faster. 
-- Using CT scans may be better in some cases where lung damage is not as generalized or other orgads may affected. However CT scans are not only more expensive but time consuming and time is exposure for healthcare personnel. 
+- To improve Using CT scans may be better in some cases where lung damage is not as generalized or other organs may be affected. However, CT scans are not only more expensive but time consuming and time is exposure for healthcare personnel. 
 
 
 
