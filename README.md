@@ -1,11 +1,11 @@
-#### imaging_diagnosis: NOT INTENDENT for MEDICAL USE
+#### ♦♦ The work in here is purely exploratory and IT IS NOT INTENDED FOR DIAGNOSTIC PURPOSES ♦♦
 
 ### COVID-19 X-Rays PREDICTOR
 Project Summary: to use X-Ray lung images to detect COVI-19 positive cases using Machine Learning. 
 
 Deep learning techniques for image analysis and classification Xray images can be used to spot anomalies and aid healthcare personnel in the diagnosis. 
 
-##  the work in here is purely exploratory and IT IS NOT INTENDED FOR DIAGNOSTIC PURPOSES. 
+
 
 ![](images/SARS-CoV-2_without_background.png)
 
