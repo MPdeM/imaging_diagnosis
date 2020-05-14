@@ -1,7 +1,7 @@
 
 #### ♦♦ The work in here is purely exploratory and  NOT INTENDED FOR DIAGNOSTIC PURPOSES ♦♦
 
-### COVID-19 X-Rays PREDICTOR
+### COVID-19 X-Rays TOOl PREDICTOR
 Project Summary: A prototype Machine Learning tool that uses X-Ray lung images to detect COVI-19 positive cases. 
 
 Deep learning techniques for image analysis and classification can be used on X-ray images to spot anomalies and aid healthcare personnel in the diagnosis. Based on publicly available data of Covid-19 positive and normals this model was able to properly predict the risk of Covid-19 on a X-ray image.
